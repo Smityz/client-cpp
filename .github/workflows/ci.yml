@@ -2,7 +2,7 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - cmake-2 
 
 name: CI
 
