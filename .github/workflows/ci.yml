@@ -1,0 +1,17 @@
+on:
+  pull_request:
+  push:
+    branches:
+      cmake-2
+
+name: CI
+
+jobs:
+  unit-test:
+    name: build 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Rust Cache
+        uses: Swatinem/rust-cache@v1.4.0
+      - name: cmake build
+        run: cmake -S . -B build && cmake --build build
