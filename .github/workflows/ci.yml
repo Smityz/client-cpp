@@ -11,7 +11,5 @@ jobs:
     name: build 
     runs-on: ubuntu-latest
     steps:
-      - name: Rust Cache
-        uses: Swatinem/rust-cache@v1.4.0
       - name: cmake build
-        run: ls && pwd && cmake -S . -B build && cmake --build build
+        run: cmake -S . -B build && cmake --build build
